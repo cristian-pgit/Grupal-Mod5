@@ -8,13 +8,13 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet("/inicio")
-public class Inicio extends HttpServlet {
+@WebServlet("/contacto")
+public class Contacto extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    public Inicio() {
-        super();
 
+    public Contacto() {
+        super();
     }
 
 
@@ -39,7 +39,7 @@ public class Inicio extends HttpServlet {
 				+ "          <a class=\"nav-link active\" aria-current=\"page\" href=\"Inicio\">Home</a>\r\n"
 				+ "        </li>\r\n"
 				+ "        <li class=\"nav-item\">\r\n"
-				+ "          <a class=\"nav-link\" href=\"Contacto\">Contacto</a>\r\n"
+				+ "          <a class=\"nav-link\" href=\"#\">Contacto</a>\r\n"
 				+ "        </li>\r\n"
 				+ "	<li class=\"nav-item\">\r\n"
 				+ "          <a class=\"nav-link\" href=\"CrearCapacitacion\">Crear Capacitacion</a>\r\n"
@@ -51,17 +51,19 @@ public class Inicio extends HttpServlet {
 				+ "    </div>\r\n"
 				+ "  </div>\r\n"
 				+ "</nav>");
-		out.println("<h3>Bienvenidos a la Pagina de Asesorias en Prevencion de Riesgos</h3>");
-		out.println("<h1 style=\"align-center\">PIKER DANS LES YOUX</h1>");
-		out.println("<h4> Esta Funcionando desde servlet</h4>");
+		out.println("<div class=\"mb-3\">\r\n"
+				+ "  <label for=\"exampleFormControlInput1\" class=\"form-label\">Email address</label>\r\n"
+				+ "  <input type=\"email\" class=\"form-control\" id=\"exampleFormControlInput1\" placeholder=\"name@example.com\">\r\n"
+				+ "</div>\r\n"
+				+ "<div class=\"mb-3\">\r\n"
+				+ "  <label for=\"exampleFormControlTextarea1\" class=\"form-label\">Example textarea</label>\r\n"
+				+ "  <textarea class=\"form-control\" id=\"exampleFormControlTextarea1\" rows=\"3\"></textarea>\r\n"
+				+ "</div>");
 		out.println("</body>");
 		out.println("</html>");
-		
-		
-				
 	}
 
-	
+
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doGet(request, response);
 	}

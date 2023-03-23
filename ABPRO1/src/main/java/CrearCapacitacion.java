@@ -8,11 +8,12 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet("/inicio")
-public class Inicio extends HttpServlet {
+@WebServlet("/CrearCapacitacion")
+public class CrearCapacitacion extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    public Inicio() {
+
+    public CrearCapacitacion() {
         super();
 
     }
@@ -51,18 +52,25 @@ public class Inicio extends HttpServlet {
 				+ "    </div>\r\n"
 				+ "  </div>\r\n"
 				+ "</nav>");
-		out.println("<h3>Bienvenidos a la Pagina de Asesorias en Prevencion de Riesgos</h3>");
-		out.println("<h1 style=\"align-center\">PIKER DANS LES YOUX</h1>");
-		out.println("<h4> Esta Funcionando desde servlet</h4>");
+		out.println("<div class=\"mb-3\">\r\n"
+				+ "            <label for=\"exampleFormControlInput1\" class=\"form-label\"> Ingresa Id de Capacitacion </label>\r\n"
+				+ "            <input type=\"int\" class=\"form-control\" id=\"exampleFormControlInput1\" placeholder=\"1\">\r\n"
+				+ "          </div>\r\n"
+				+ "          <div class=\"mb-3\">\r\n"
+				+ "            <label for=\"exampleFormControlInput1\" class=\"form-label\"> Ingresa Rut Cliente </label>\r\n"
+				+ "            <input type=\"int\" class=\"form-control\" id=\"exampleFormControlInput1\" placeholder=\"XXXXXXXX\">\r\n"
+				+ "          </div>\r\n"
+				+ "          <div class=\"mb-3\">\r\n"
+				+ "            <label for=\"exampleFormControlInput1\" class=\"form-label\"> Ingresa Nombres de Cliente </label>\r\n"
+				+ "            <input type=\"int\" class=\"form-control\" id=\"exampleFormControlInput1\" placeholder=\"1\">\r\n"
+				+ "          </div>");
 		out.println("</body>");
 		out.println("</html>");
-		
-		
-				
 	}
 
-	
+
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
 		doGet(request, response);
 	}
 

@@ -39,4 +39,24 @@
     <servlet-name>InicioSer</servlet-name>
     <url-pattern>/InicioSer</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Contacto</display-name>
+    <servlet-name>Contacto</servlet-name>
+    <servlet-class>Contacto</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Contacto</servlet-name>
+    <url-pattern>/Contacto</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CrearCapacitacion</display-name>
+    <servlet-name>CrearCapacitacion</servlet-name>
+    <servlet-class>CrearCapacitacion</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CrearCapacitacion</servlet-name>
+    <url-pattern>/CrearCapacitacion</url-pattern>
+  </servlet-mapping>
 </web-app>
