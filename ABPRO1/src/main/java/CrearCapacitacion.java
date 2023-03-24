@@ -63,9 +63,7 @@ public class CrearCapacitacion extends HttpServlet {
 				+ "          </div>\r\n"
 				+ "        </div>\r\n"
 				+ "      </nav>");
-<<<<<<< HEAD
-		out.println("<body>\n"
-				+ "   <div class=\"container\">\n"
+		out.println("<div class=\"container\">\n"
 				+ "      <h1>Crear capacitación</h1>\n"
 				+ "      <form action=\"guardar-capacitacion.jsp\" method=\"post\">\n"
 				+ "         <div class=\"mb-3\">\n"
@@ -91,23 +89,8 @@ public class CrearCapacitacion extends HttpServlet {
 				+ "         <button type=\"submit\" class=\"btn btn-primary\">Guardar</button>\n"
 				+ "      </form>\n"
 				+ "   </div>\n"
-				+ "</body>\n"
-				+ "\n"
 				+ "");
-=======
-		out.println("<div class=\"mb-3\">\r\n"
-				+ "            <label for=\"exampleFormControlInput1\" class=\"form-label\"> Ingresa Id de Capacitacion </label>\r\n"
-				+ "            <input type=\"int\" class=\"form-control\" id=\"exampleFormControlInput1\" placeholder=\"1\">\r\n"
-				+ "          </div>\r\n"
-				+ "          <div class=\"mb-3\">\r\n"
-				+ "            <label for=\"exampleFormControlInput1\" class=\"form-label\"> Ingresa Rut Cliente </label>\r\n"
-				+ "            <input type=\"int\" class=\"form-control\" id=\"exampleFormControlInput1\" placeholder=\"XXXXXXXX\">\r\n"
-				+ "          </div>\r\n"
-				+ "          <div class=\"mb-3\">\r\n"
-				+ "            <label for=\"exampleFormControlInput1\" class=\"form-label\"> Ingresa Nombres de Cliente </label>\r\n"
-				+ "            <input type=\"int\" class=\"form-control\" id=\"exampleFormControlInput1\" placeholder=\"1\">\r\n"
-				+ "          </div>");
->>>>>>> af6d8cfec69645a0bf27f52bbb342034ab00958a
+	
 		out.println("<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN\" crossorigin=\"anonymous\"></script>");
 		out.println("</body>");
 		out.println("</html>");
