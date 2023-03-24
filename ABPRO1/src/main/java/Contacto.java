@@ -8,13 +8,13 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet("/inicio")
-public class Inicio extends HttpServlet {
+@WebServlet("/contacto")
+public class Contacto extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    public Inicio() {
-        super();
 
+    public Contacto() {
+        super();
     }
 
 
@@ -62,26 +62,20 @@ public class Inicio extends HttpServlet {
 				+ "          </div>\r\n"
 				+ "        </div>\r\n"
 				+ "      </nav>");
-		out.println("<div class=\"container-fluid\">\r\n"
-				+ "    <div class=\"row\">\r\n"
-				+ "        <div class=\"col-sm-2\"></div>\r\n"
-				+ "        <div class=\"col-sm-8\">\r\n"
-				+ "            \r\n"
-				+ "            <h3 class=\"style align-text-top, justify-content-center\">Bienvenidos a la Pagina de Asesorias en Prevencion de Riesgos</h3>\r\n"
-				+ "            <img src=\"https://ibb.co/ZcqhTXG\" alt=\"\">\r\n"
-				+ "        </div>\r\n"
-				+ "        <div class=\"col-sm-2\"></div>\r\n"
-				+ "    </div>\r\n"
+		out.println("<div class=\"mb-3\">\r\n"
+				+ "  <label for=\"exampleFormControlInput1\" class=\"form-label\">Email address</label>\r\n"
+				+ "  <input type=\"email\" class=\"form-control\" id=\"exampleFormControlInput1\" placeholder=\"name@example.com\">\r\n"
+				+ "</div>\r\n"
+				+ "<div class=\"mb-3\">\r\n"
+				+ "  <label for=\"exampleFormControlTextarea1\" class=\"form-label\">Example textarea</label>\r\n"
+				+ "  <textarea class=\"form-control\" id=\"exampleFormControlTextarea1\" rows=\"3\"></textarea>\r\n"
 				+ "</div>");
 		out.println("<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN\" crossorigin=\"anonymous\"></script>");
 		out.println("</body>");
 		out.println("</html>");
-		
-		
-				
 	}
 
-	
+
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doGet(request, response);
 	}
