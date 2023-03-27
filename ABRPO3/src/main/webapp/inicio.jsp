@@ -8,7 +8,7 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <link rel="shortcut icon" href="https://i.ibb.co/FzxxWTL/BDLY-ico.png" type="image/x-icon">
-<link rel="stylesheet" href="WEB-INF/style.css">
+<link rel="stylesheet" href="Assets/style.css">
 </head>
 <body>
 <jsp:include page="nav.jsp"></jsp:include>

@@ -36,6 +36,7 @@ public class LoginServlet extends HttpServlet {
 		boolean esUsuarioValido = validarUsuarioYPass(userName, pass);
 		if (esUsuarioValido) {
 			System.out.println("El usuario es correcto");
+			session.setAttribute("userName", userName);
 			RequestDispatcher rd = getServletContext().getRequestDispatcher("/inicio.jsp");
 			rd.forward(request, response);
 		} else {

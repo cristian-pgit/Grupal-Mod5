@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+body{
+    background-image: url(https://i.ibb.co/ws2HG7h/BDLY-fondo.png);
+    background-size: cover;
+    background-position: center;
+ 
+    
+
+}
+
+#user{
+	font-size: 1.2rem;
+	color: blue;
+	display: flex;
+	align-items: center;
+}
+
+#tu{
+	font-size: 1.2rem;
+	display: flex;
+	align-items: center;
+}
+#btnlo{
+	height: 2.3rem;
+}
+
+#disclaimer{
+        font-size: 0.292rem !important;
+    }
+#headerContacto{
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+#enviar{
+    font-weight: 700;
+}
