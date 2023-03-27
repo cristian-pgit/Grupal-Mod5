@@ -18,6 +18,18 @@
     <servlet-name>error</servlet-name>
     <jsp-file>/error.jsp</jsp-file>
   </servlet>
+  <servlet>
+  	<servlet-name>crearcapacitacion</servlet-name>
+    <jsp-file>/crearcapacitacion.jsp</jsp-file>
+  </servlet>
+  <servlet>
+    <servlet-name>contacto</servlet-name>
+    <jsp-file>/contacto.jsp</jsp-file>
+  </servlet>
+   <servlet>
+    <servlet-name>listarcapacitaciones</servlet-name>
+    <jsp-file>/listarcapacitaciones.jsp</jsp-file>
+  </servlet>
    <servlet-mapping>
     <servlet-name>index</servlet-name>
     <url-pattern>/index.jsp</url-pattern>
@@ -33,6 +45,18 @@
   <servlet-mapping>
     <servlet-name>LoginServlet</servlet-name>
     <url-pattern>/LoginServlet</url-pattern>
+  </servlet-mapping>
+    <servlet-mapping>
+    <servlet-name>contacto</servlet-name>
+    <url-pattern>/contacto.jsp</url-pattern>
+  </servlet-mapping>
+    <servlet-mapping>
+    <servlet-name>crearcapacitacion</servlet-name>
+    <url-pattern>/crearcapacitacion.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>listarcapacitaciones</servlet-name>
+    <url-pattern>/listarcapacitaciones.jsp</url-pattern>
   </servlet-mapping>
   <display-name>ABPRO2</display-name>
   <welcome-file-list>
