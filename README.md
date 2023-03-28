@@ -29,7 +29,38 @@ Hasta el momento las funcionalidades que tiene el proyecto son:
 * Formulario de contacto
 * Crear y listar capacitaciones
 
+##**ABPRO1**
+Se solicita crear tres servlets, uno para cada uno de los tres primeros casos de uso de la lista
+anterior(Inicio, Contacto, Crear Capacitación).
 
+
+
+##**ABPRO2**
+1. Cree un servlet para el caso de uso Listar Capacitaciones. Por lo pronto solo debe desplegar
+el sitio HTML creado en los ejercicios de la unidad anterior.
+2. Cree un servlet para el caso de uso Login. Al igual que en el caso anterior, el servlet solo
+debe desplegar un formulario HTML para el acceso a la plataforma.
+3. El formulario declarado en el punto anterior debe llevar un servlet de ingreso. Este servlet
+debe verificar que el usuario ingresado sea igual a “admin” y que la clave sea igual a “1234”.
+Si alguno de estos valores no coincide, se debe redireccionar al usuario al login.
+Si los datos de acceso son correctos, se debe crear una sesión para el usuario, y
+redireccionarlo al servlet perteneciente al caso de uso Contacto.
+4. En los servlets correspondientes a Contacto, Crear Capacitaciones y Listar Capacitaciones,
+no se puede desplegar el diseño respectivo si es que no se ha creado una sesión de usuario
+anteriormente. En caso de que eso suceda, se debe redireccionar al usuario al login, de lo
+contrario se debe mantener en el mismo servlet.
+
+
+##**ABPRO3**
+1. En caso de que algún servlet esté generando código HTML directamente, debe modificar
+este comportamiento utilizando un JSP adecuado al caso.
+2. Debe aplicar estilos CSS a cada sitio. Todos los archivos JSP deben compartir el mismo
+archivo de estilos.
+3. En caso de que aplique, implemente funciones Javascript, jQuery o librerías que contengan
+funcionalidades pertinentes a los casos de uso implementados.
+4. Todas las páginas deben compartir el mismo menú, a excepción del login.
+5. Finalmente, implemente un servlet que permita cerrar la sesión de usuario, y redireccionar
+al usuario al sitio de login.
 
 
 ### Integrantes
