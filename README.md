@@ -29,14 +29,14 @@ Hasta el momento las funcionalidades que tiene el proyecto son:
 * Formulario de contacto
 * Crear y listar capacitaciones
 
-##**ABPRO1**
+## **ABPRO1**
 
 Se solicita crear tres servlets, uno para cada uno de los tres primeros casos de uso de la lista
 anterior(Inicio, Contacto, Crear Capacitación).
 
 
 
-##**ABPRO2**
+## **ABPRO2**
 1. Cree un servlet para el caso de uso Listar Capacitaciones. Por lo pronto solo debe desplegar
 el sitio HTML creado en los ejercicios de la unidad anterior.
 2. Cree un servlet para el caso de uso Login. Al igual que en el caso anterior, el servlet solo
@@ -52,7 +52,7 @@ anteriormente. En caso de que eso suceda, se debe redireccionar al usuario al lo
 contrario se debe mantener en el mismo servlet.
 
 
-##**ABPRO3**
+## **ABPRO3**
 1. En caso de que algún servlet esté generando código HTML directamente, debe modificar
 este comportamiento utilizando un JSP adecuado al caso.
 2. Debe aplicar estilos CSS a cada sitio. Todos los archivos JSP deben compartir el mismo
