@@ -37,9 +37,9 @@ anterior(Inicio, Contacto, Crear Capacitación).
 
 
 ## **ABPRO2**
-1. Cree un servlet para el caso de uso Listar Capacitaciones. Por lo pronto solo debe desplegar
+1. Crear un servlet para el caso de uso Listar Capacitaciones. Por lo pronto solo debe desplegar
 el sitio HTML creado en los ejercicios de la unidad anterior.
-2. Cree un servlet para el caso de uso Login. Al igual que en el caso anterior, el servlet solo
+2. Crear un servlet para el caso de uso Login. Al igual que en el caso anterior, el servlet solo
 debe desplegar un formulario HTML para el acceso a la plataforma.
 3. El formulario declarado en el punto anterior debe llevar un servlet de ingreso. Este servlet
 debe verificar que el usuario ingresado sea igual a “admin” y que la clave sea igual a “1234”.
@@ -55,7 +55,7 @@ contrario se debe mantener en el mismo servlet.
 ## **ABPRO3**
 1. En caso de que algún servlet esté generando código HTML directamente, debe modificar
 este comportamiento utilizando un JSP adecuado al caso.
-2. Debe aplicar estilos CSS a cada sitio. Todos los archivos JSP deben compartir el mismo
+2. Aplicar estilos CSS a cada sitio. Todos los archivos JSP deben compartir el mismo
 archivo de estilos.
 3. En caso de que aplique, implemente funciones Javascript, jQuery o librerías que contengan
 funcionalidades pertinentes a los casos de uso implementados.
