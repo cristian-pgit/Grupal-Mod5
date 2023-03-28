@@ -15,6 +15,9 @@
 <link rel="stylesheet" href="Assets/style.css">
 </head>
 <body>
+<c:if test="${sessionScope.userName == null}">
+    <c:redirect url="/" />
+</c:if>
 <jsp:include page="nav.jsp"></jsp:include>
 
 	

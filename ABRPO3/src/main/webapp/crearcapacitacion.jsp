@@ -16,6 +16,9 @@
 </head>
 <body>
 <jsp:include page="nav.jsp"></jsp:include>
+<c:if test="${sessionScope.userName == null}">
+    <c:redirect url="/" />
+</c:if>
 
 	<div class="container">
 		<br>

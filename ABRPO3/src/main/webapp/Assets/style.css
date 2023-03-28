@@ -22,7 +22,8 @@ body{
 	align-items: center;
 }
 #btnlo{
-	height: 2.3rem;
+	height: 2.2rem;
+	margin-bottom: 30px;
 }
 
 #disclaimer{
