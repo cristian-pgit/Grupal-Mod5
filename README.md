@@ -30,6 +30,7 @@ Hasta el momento las funcionalidades que tiene el proyecto son:
 * Crear y listar capacitaciones
 
 ##**ABPRO1**
+
 Se solicita crear tres servlets, uno para cada uno de los tres primeros casos de uso de la lista
 anterior(Inicio, Contacto, Crear Capacitación).
 
