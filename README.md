@@ -7,7 +7,7 @@ que le permita administrar los principales procesos que se llevan a cabo en ella
 
 Se solicita crear un sistema implementando los conceptos de aplicaciones web utilizando una arquitectura multicapa .
 
-**Desarrollo**
+## **Desarrollo**
 
 
 En primer lugar, preparamos el entorno utilizando el programa **Eclipse JEE IDE** y la libreria JRE **Apache Tomcat V10** que nos permite levantar un servidor local.
