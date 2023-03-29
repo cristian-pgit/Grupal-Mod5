@@ -1,0 +1,74 @@
+.titulo1 {
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    
+}
+
+.subtitulo1{
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+}
+
+.subtitulo2{
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+}
+
+
+
+.extract{
+    font-family: 'Comfortaa', cursive;
+}
+
+
+body {
+    background-color: rgb(255, 255, 255);
+    margin: 0 auto;
+    padding: 0 auto;
+    width: 100%;
+    height: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+body{
+    
+    background-size: 100%;  
+}
+
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+.d-block {
+    display: block;
+     margin-left: auto;
+     margin-right: auto;
+     width: 60%;
+
+}
+
+.card {
+    background-color: HoneyDew
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  color: #000000;
+  background-color: #000000;
+}
+
+
+/* contacto */
+
+.text-center header{
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+
+}
+
+
+
