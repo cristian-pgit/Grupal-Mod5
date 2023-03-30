@@ -34,7 +34,7 @@
         <font color="#410194"><c:out value="${capacit.hora}"/>,</font>
         <font color="#410194"><c:out value="${capacit.lugar}"/>,</font>
         <font color="#410194"><c:out value="${capacit.duracion}"/>,</font>
-        <font color="#410194"><c:out value="${capacit.cantAsist}"/>,</font>
+        <font color="#410194"><c:out value="${capacit.cantAsist}"/></font><br>
        </c:forEach>
     </div>
 	<script

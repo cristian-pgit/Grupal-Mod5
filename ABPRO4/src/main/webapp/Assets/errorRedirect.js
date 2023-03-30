@@ -4,5 +4,5 @@
 
 
  setTimeout(function() {
-        window.location.href = 'inicio.jsp';
+        window.location.href = 'index.jsp';
     }, 1400);
