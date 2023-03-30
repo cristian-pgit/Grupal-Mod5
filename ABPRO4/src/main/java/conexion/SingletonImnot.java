@@ -7,12 +7,10 @@ public class SingletonImnot {
 	private static Connection conn = null;
 	// Constructor
 	private SingletonImnot(){
-		String url =
-				"jdbc:oracle:thin:@localhost:3306:bdlydb";
-		String driver =
-				"oracle.jdbc.driver.OracleDriver";
-		String usuario = "usuario";
-		String password = "clave";
+		String url = "jdbc:mysql://localhost:3306/bdlydb";
+		String driver = "com.mysql.cj.jdbc.Driver";
+		String usuario = "root";
+		String password = "Larcon90";
 		try{
 			Class.forName(driver);
 			conn = DriverManager.getConnection
@@ -30,7 +28,9 @@ public class SingletonImnot {
 			new SingletonImnot();
 		}
 		return conn;
-	} // Fin getConnection
+	} 
+	
+
 	
 
 }

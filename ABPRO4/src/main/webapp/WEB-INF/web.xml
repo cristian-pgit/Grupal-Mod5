@@ -58,7 +58,7 @@
     <servlet-name>listarcapacitaciones</servlet-name>
     <url-pattern>/listarcapacitaciones.jsp</url-pattern>
   </servlet-mapping>
-  <display-name>ABPRO3</display-name>
+  <display-name>ABPRO4</display-name>
   <welcome-file-list>
    	<welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>

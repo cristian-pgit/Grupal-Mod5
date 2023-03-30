@@ -7,9 +7,14 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
+import model.Usuario;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
+
+import dao.UsuarioDao;
+import idao.UsuarioDaoImpl;
 
 
 public class LoginServlet extends HttpServlet {
@@ -34,6 +39,8 @@ public class LoginServlet extends HttpServlet {
 		String pass = request.getParameter("floatingPassword");
 		
 		boolean esUsuarioValido = validarUsuarioYPass(userName, pass);
+		//TODO - borrar mostrarUsuario
+		mostrarUsuario();
 		if (esUsuarioValido) {
 			System.out.println("El usuario es correcto");
 			session.setAttribute("userName", userName);
@@ -44,6 +51,17 @@ public class LoginServlet extends HttpServlet {
 			response.sendRedirect("error.jsp");
 		}
 		
+		
+	}
+
+
+	private void mostrarUsuario() {
+		UsuarioDao dao = new UsuarioDaoImpl();
+		
+		List<Usuario> usuario = dao.getAllUsuario();
+		for(Usuario u: usuario) {
+			System.out.println(u.toString());
+		}
 		
 	}
 
