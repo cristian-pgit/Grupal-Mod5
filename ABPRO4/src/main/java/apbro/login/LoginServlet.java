@@ -39,8 +39,6 @@ public class LoginServlet extends HttpServlet {
 		String pass = request.getParameter("floatingPassword");
 		
 		boolean esUsuarioValido = validarUsuarioYPass(userName, pass);
-		//TODO - borrar mostrarUsuario
-		mostrarUsuario();
 		if (esUsuarioValido) {
 			System.out.println("El usuario es correcto");
 			session.setAttribute("userName", userName);
@@ -51,17 +49,6 @@ public class LoginServlet extends HttpServlet {
 			response.sendRedirect("error.jsp");
 		}
 		
-		
-	}
-
-
-	private void mostrarUsuario() {
-		UsuarioDao dao = new UsuarioDaoImpl();
-		
-		List<Usuario> usuario = dao.getAllUsuario();
-		for(Usuario u: usuario) {
-			System.out.println(u.toString());
-		}
 		
 	}
 

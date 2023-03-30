@@ -22,7 +22,7 @@
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="crearcapacitacion.jsp">Crear Capacitacion</a></li>
-            <li><a class="dropdown-item" href="listarcapacitaciones.jsp">Listar Capacitaciones</a></li>
+            <li><a class="dropdown-item" href="ListarCapacitaciones">Listar Capacitaciones</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item d-none" href="#">Crear Cliente</a></li>
             <li><a class="dropdown-item d-none" href="#">Crear Profesional</a></li>

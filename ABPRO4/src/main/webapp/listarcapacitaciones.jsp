@@ -27,51 +27,15 @@
         <br>
 	    <h1 class="text-center py-3">Listado de Capacitaciones</h1>
         <br>
-        <table class="table table-sm table-hover" id="size">
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Nombre de la Capacitación</th>
-                    <th>Fecha</th>
-                    <th>Hora</th>
-                    <th>Lugar</th>
-                    <th>Duración (horas)</th>
-                    <th>Cantidad de Asistentes</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                <tr>
-                    <th>1</th>
-                    <td>Capacitación en Ventas</td>
-                    <td>20-04-2023</td>
-                    <td>10:00 - 12:00</td>
-                    <td>Sala de Conferencias A</td>
-                    <td>2</td>
-                    <td>30</td>
-                </tr>
-
-                <tr>
-                    <th>2</th>
-                    <td>Capacitación en Liderazgo</td>
-                    <td>23-05-2023</td>
-                    <td>14:00 - 16:00</td>
-                    <td>Sala de Conferencias B</td>
-                    <td>2</td>
-                    <td>20</td>
-                </tr>
-
-                <tr>
-                    <th>3</th>
-                    <td>Capacitación en Comunicación</td>
-                    <td>10-06-2023</td>
-                    <td>09:00 - 13:00</td>
-                    <td>Sala de Reuniones C</td>
-                    <td>4</td>
-                    <td>15</td>
-                </tr>
-            </tbody>
-        </table>
+       <c:forEach var="capacit" items="${requestScope.capacitaciones}">
+        <font color="#410194"><c:out value="${capacit.idCapacitacion}"/>,</font>
+        <font color="#410194"><c:out value="${capacit.rutCliente}"/>,</font>
+        <font color="#410194"><c:out value="${capacit.dia}"/>,</font>
+        <font color="#410194"><c:out value="${capacit.hora}"/>,</font>
+        <font color="#410194"><c:out value="${capacit.lugar}"/>,</font>
+        <font color="#410194"><c:out value="${capacit.duracion}"/>,</font>
+        <font color="#410194"><c:out value="${capacit.cantAsist}"/>,</font>
+       </c:forEach>
     </div>
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"

@@ -6,6 +6,7 @@ public class Usuario {
 
 	private Integer idUsuario;
 	private String userName;
+	private String password;
 	private Date fNacimiento;
 	private Integer run;
 	
@@ -34,11 +35,18 @@ public class Usuario {
 	public void setRun(Integer run) {
 		this.run = run;
 	}
-	@Override
-	public String toString() {
-		return "Usuario [idUsuario=" + idUsuario + ", userName=" + userName + ", fNacimiento=" + fNacimiento + ", run="
-				+ run + "]";
+	public String getPassword() {
+		return password;
 	}
-	
+	public void setPassword(String password) {
+		this.password = password;
+	}
+		@Override
+	public String toString() {
+		return "Id Usuario: " + idUsuario + 
+				"\nNombre de Usuario: " + userName + 
+				"\nFecha de Nacimiento: " + fNacimiento + 
+				"\nRun: " + run;
+	}
 	
 }
