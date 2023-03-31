@@ -34,7 +34,12 @@ public class CrearCapacitacion extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Capacitacion cap = setCapacitacion(request);
-		agregarCapacitacion(cap);
+		try {
+			agregarCapacitacion(cap);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		response.sendRedirect("crearcapacitacion.jsp");
 	}
 
@@ -46,6 +51,7 @@ public class CrearCapacitacion extends HttpServlet {
 
 
 	private Capacitacion setCapacitacion(HttpServletRequest request) {
+		Capacitacion cap = null;
 		String idCapa  = request.getParameter("idCapacitacion");
 		String rutCliente = request.getParameter("rutCliente");
 		String dia = request.getParameter("dia");
@@ -53,15 +59,25 @@ public class CrearCapacitacion extends HttpServlet {
 		String lugar = request.getParameter("lugar");
 		String duracion = request.getParameter("duracion");
 		String cantAsist = request.getParameter("cantAsist");
-		
-		Capacitacion cap = new Capacitacion();
-		cap.setIdCapacitacion(Integer.parseInt(idCapa));
-		cap.setRutCliente(Integer.parseInt(rutCliente));
-		cap.setDia(dia);
-		cap.setHora(hora);
-		cap.setLugar(lugar);
-		cap.setDuracion(Integer.parseInt(duracion));
-		cap.setCantAsist(Integer.parseInt(cantAsist));
+		if(idCapa == null||rutCliente ==null|| hora==null||lugar==null||duracion==null||cantAsist==null) {
+			System.out.println("formulario con campos vacio");	
+		} else {
+			cap = new Capacitacion();
+			try {
+				cap.setIdCapacitacion(Integer.parseInt(idCapa));
+				cap.setRutCliente(Integer.parseInt(rutCliente));
+				cap.setDia(dia);
+				cap.setHora(hora);
+				cap.setLugar(lugar);
+				cap.setDuracion(Integer.parseInt(duracion));
+				cap.setCantAsist(Integer.parseInt(cantAsist));
+			} catch (NumberFormatException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+
+		}
 		return cap;
 	}
 
@@ -75,5 +91,7 @@ public class CrearCapacitacion extends HttpServlet {
 		}
 		return null;
 	}
+	
+	
 
 }
