@@ -11,43 +11,64 @@
 	integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
 	crossorigin="anonymous">
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<link rel="shortcut icon" href="https://i.ibb.co/FzxxWTL/BDLY-ico.png" type="image/x-icon">
+<link rel="shortcut icon" href="https://i.ibb.co/FzxxWTL/BDLY-ico.png"
+	type="image/x-icon">
 <link rel="stylesheet" href="Assets/style.css">
 </head>
 <body>
-<jsp:include page="nav.jsp"></jsp:include>
-<c:if test="${sessionScope.userName == null}">
-    <c:redirect url="/" />
-</c:if>
+	<jsp:include page="nav.jsp"></jsp:include>
+	<c:if test="${sessionScope.userName == null}">
+		<c:redirect url="/" />
+	</c:if>
+
 
 	<div class="container">
-		<br>
-		<h1>Crear capacitación</h1>
-		<form action="guardar-capacitacion.jsp" method="post">
-			<div class="mb-3">
-				<label for="nombre" class="form-label">Nombre</label> <input
-					type="text" class="form-control" id="nombre" name="nombre" required>
+		<div class="row">
+			<div class="col-4"></div>
+			<div class="col-4 text-center">
+				<br>
+				<h1 class="h3 mb-3 fw-normal text-center">Crear capacitación</h1>
+
+				<form action="CrearCapacitacion" method="post">
+					<div class="form-group">
+						<label class="text-center" for="idCapacitacion">ID de Capacitación:</label> <input
+							type="number" class="form-control" id="idCapacitacion"
+							name="idCapacitacion">
+					</div>
+					<div class="form-group">
+						<label class="text-center" for="rutCliente">RUT de Cliente:</label> <input
+							type="number" class="form-control" id="rutCliente"
+							name="rutCliente">
+					</div>
+					<div class="form-group">
+						<label class="text-center" for="dia">Día:</label> <input type="text"
+							class="form-control" id="dia" name="dia">
+					</div>
+					<div class="form-group">
+						<label class="text-center" for="hora">Hora (xx:xx):</label> <input type="text"
+							class="form-control" id="hora" name="hora"
+							pattern="^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$">
+					</div>
+					<div class="form-group">
+						<label class="text-center" for="lugar">Lugar:</label> <input type="text"
+							class="form-control" id="lugar" name="lugar">
+					</div>
+					<div class="form-group">
+						<label class="text-center" for="duracion">Duración:</label> <input type="number"
+							class="form-control" id="duracion" name="duracion">
+					</div>
+					<div class="form-group">
+						<label class="text-center" for="cantAsist">Cantidad de Asistentes:</label> <input
+							type="number" class="form-control" id="cantAsist"
+							name="cantAsist">
+					</div>
+					<br>
+					<button type="submit" class="btn btn-primary" >Guardar</button>
+				</form>
 			</div>
-			<div class="mb-3">
-				<label for="descripcion" class="form-label">Descripción</label>
-				<textarea class="form-control" id="descripcion" name="descripcion"
-					rows="3"></textarea>
-			</div>
-			<div class="mb-3">
-				<label for="fecha" class="form-label">Fecha</label> <input
-					type="date" class="form-control" id="fecha" name="fecha" required>
-			</div>
-			<div class="mb-3">
-				<label for="duracion" class="form-label">Duración (horas)</label> <input
-					type="number" class="form-control" id="duracion" name="duracion"
-					required>
-			</div>
-			<div class="mb-3">
-				<label for="lugar" class="form-label">Lugar</label> <input
-					type="text" class="form-control" id="lugar" name="lugar" required>
-			</div>
-			<button type="submit" class="btn btn-primary">Guardar</button>
-		</form>
+			<div class="col-4"></div>
+		</div>
+
 	</div>
 
 

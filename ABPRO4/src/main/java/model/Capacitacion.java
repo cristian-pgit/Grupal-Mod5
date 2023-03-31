@@ -7,7 +7,7 @@ public class Capacitacion extends Usuario {
 	private Integer idCapacitacion;
 	private Integer rutCliente;
 	private String dia;
-	private Date hora;
+	private String hora;
 	private String lugar;
 	private int duracion;
 	private int cantAsist;
@@ -31,10 +31,10 @@ public class Capacitacion extends Usuario {
 	public void setDia(String dia) {
 		this.dia = dia;
 	}
-	public Date getHora() {
+	public String getHora() {
 		return hora;
 	}
-	public void setHora(Date hora) {
+	public void setHora(String hora) {
 		this.hora = hora;
 	}
 	public String getLugar() {

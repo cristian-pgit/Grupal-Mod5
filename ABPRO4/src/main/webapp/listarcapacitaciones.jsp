@@ -27,15 +27,32 @@
         <br>
 	    <h1 class="text-center py-3">Listado de Capacitaciones</h1>
         <br>
-       <c:forEach var="capacit" items="${requestScope.capacitaciones}">
-        <font color="#410194"><c:out value="${capacit.idCapacitacion}"/>,</font>
-        <font color="#410194"><c:out value="${capacit.rutCliente}"/>,</font>
-        <font color="#410194"><c:out value="${capacit.dia}"/>,</font>
-        <font color="#410194"><c:out value="${capacit.hora}"/>,</font>
-        <font color="#410194"><c:out value="${capacit.lugar}"/>,</font>
-        <font color="#410194"><c:out value="${capacit.duracion}"/>,</font>
-        <font color="#410194"><c:out value="${capacit.cantAsist}"/></font><br>
-       </c:forEach>
+       <table>
+  <thead>
+    <tr>
+      <th>ID de Capacitación</th>
+      <th>RUT de Cliente</th>
+      <th>Día</th>
+      <th>Hora</th>
+      <th>Lugar</th>
+      <th>Duración</th>
+      <th>Cantidad de Asistentes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <c:forEach var="capacit" items="${requestScope.capacitaciones}">
+      <tr>
+        <td><c:out value="${capacit.idCapacitacion}"/></td>
+        <td><c:out value="${capacit.rutCliente}"/></td>
+        <td><c:out value="${capacit.dia}"/></td>
+        <td><c:out value="${capacit.hora}"/></td>
+        <td><c:out value="${capacit.lugar}"/></td>
+        <td><c:out value="${capacit.duracion}"/></td>
+        <td><c:out value="${capacit.cantAsist}"/></td>
+      </tr>
+    </c:forEach>
+  </tbody>
+</table>
     </div>
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"

@@ -1,39 +1,74 @@
 @charset "UTF-8";
 
-body{
-    background-image: url(https://i.ibb.co/ws2HG7h/BDLY-fondo.png);
-    background-size: cover;
-    background-position: center;
- 
-    
-
+body {
+	background-image: url(https://i.ibb.co/ws2HG7h/BDLY-fondo.png);
+	background-size: cover;
+	background-position: center;
 }
 
-#user{
+#user {
 	font-size: 1.2rem;
 	color: blue;
 	display: flex;
 	align-items: center;
 }
 
-#tu{
+#tu {
 	font-size: 1.2rem;
 	display: flex;
 	align-items: center;
 }
-#btnlo{
+/* afecta boton de Log out */
+#btnlo {
 	height: 2.2rem;
 	margin-bottom: 10px;
 }
 
-#disclaimer{
-        font-size: 0.292rem !important;
-    }
-#headerContacto{
+#disclaimer {
+	font-size: 0.292rem !important;
+}
+
+#headerContacto {
 	font-size: 2rem;
 	font-weight: bold;
 }
 
-#enviar{
-    font-weight: 700;
+#enviar {
+	font-weight: 700;
 }
+
+/* Seccion de listar capacitaciones*/
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th, td {
+	text-align: left;
+	padding: 8px;
+	border: 1px solid #ddd;
+}
+
+th {
+	background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+tr:hover {
+	background-color: #ddd;
+}
+/* --------------------------------- */
+/*  Crear Capacitacion */
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button
+	{
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type=number] {
+	-moz-appearance: textfield;
+}
+

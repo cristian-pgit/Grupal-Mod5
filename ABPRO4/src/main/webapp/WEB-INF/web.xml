@@ -87,4 +87,14 @@
     <servlet-name>ListarCapacitaciones</servlet-name>
     <url-pattern>/ListarCapacitaciones</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description>Crea la Capacitacion</description>
+    <display-name>CrearCapacitacion</display-name>
+    <servlet-name>CrearCapacitacion</servlet-name>
+    <servlet-class>abpro.CrearCapacitacion</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CrearCapacitacion</servlet-name>
+    <url-pattern>/CrearCapacitacion</url-pattern>
+  </servlet-mapping>
 </web-app>
