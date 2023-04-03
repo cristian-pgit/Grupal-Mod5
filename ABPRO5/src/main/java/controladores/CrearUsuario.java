@@ -13,10 +13,10 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import dao.CapacitacionDAO;
-import dao.UsuarioDAO;
-import idao.CapacitacionDaoImpl;
-import idao.UsuarioDaoImpl;
+import implementacion.CapacitacionDaoImpl;
+import implementacion.UsuarioDaoImpl;
+import interfaces.CapacitacionDAO;
+import interfaces.UsuarioDAO;
 
 /**
  * Servlet implementation class CrearUsuario
@@ -83,7 +83,7 @@ public class CrearUsuario extends HttpServlet {
 
 
 		}
-		return null;
+		return user;
 	}
 	
 	private Date getDate(String fecha) {

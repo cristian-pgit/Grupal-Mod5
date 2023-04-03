@@ -13,8 +13,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
-import dao.UsuarioDAO;
-import idao.UsuarioDaoImpl;
+import implementacion.UsuarioDaoImpl;
+import interfaces.UsuarioDAO;
 
 
 public class LoginServlet extends HttpServlet {
