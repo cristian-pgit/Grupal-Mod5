@@ -13,8 +13,8 @@ import model.Capacitacion;
 import java.io.IOException;
 import java.util.List;
 
-import dao.CapacitacionDAO;
-import idao.CapacitacionDaoImpl;
+import implementacion.CapacitacionDaoImpl;
+import interfaces.CapacitacionDAO;
 
 
 public class ListarCapacitaciones extends HttpServlet {

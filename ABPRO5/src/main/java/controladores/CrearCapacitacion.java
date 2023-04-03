@@ -13,8 +13,8 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import dao.CapacitacionDAO;
-import idao.CapacitacionDaoImpl;
+import implementacion.CapacitacionDaoImpl;
+import interfaces.CapacitacionDAO;
 
 
 public class CrearCapacitacion extends HttpServlet {

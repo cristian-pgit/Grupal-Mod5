@@ -12,8 +12,8 @@ import model.Usuario;
 import java.io.IOException;
 import java.util.List;
 
-import dao.UsuarioDAO;
-import idao.UsuarioDaoImpl;
+import implementacion.UsuarioDaoImpl;
+import interfaces.UsuarioDAO;
 
 
 public class ListarUsuarios extends HttpServlet {

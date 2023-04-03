@@ -65,9 +65,18 @@
 							type="text" required class="form-control" id="lugar" name="lugar">
 					</div>
 					<div class="form-group">
-						<label class="text-center" for="duracion">Duración:</label> <input
-							type="number" required class="form-control" id="duracion"
-							name="duracion">
+						<label class="text-center" for="duracion">Duración:</label> <select class="form-control"
+							id="duracion" name="duracion">
+							<option value="novalue" disabled selected hidden>Selecciona duracion</option>
+							<option value="30">30 minutos</option>
+							<option value="60">1 Hora</option>
+							<option value="90">1 Hora 30 minutos</option>
+							<option value="120">2 Horas</option>
+							<option value="150">2 Horas 30 minutos</option>
+							<option value="180">3 Horas</option>
+							<option value="210">3 Horas 30 Minutos </option>
+							<option value="240">4 Horas</option>
+						</select>
 					</div>
 					<div class="form-group">
 						<label class="text-center" for="cantAsist">Cantidad de
