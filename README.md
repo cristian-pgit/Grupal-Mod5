@@ -28,6 +28,7 @@ Hasta el momento las funcionalidades que tiene el proyecto son:
 * Login y log out
 * Formulario de contacto
 * Crear y listar capacitaciones
+* Crear y listar usuarios
 
 ## **ABPRO1**
 
@@ -62,6 +63,37 @@ funcionalidades pertinentes a los casos de uso implementados.
 * Todas las páginas deben compartir el mismo menú, a excepción del login.
 * Finalmente, implemente un servlet que permita cerrar la sesión de usuario, y redireccionar
 al usuario al sitio de login.
+
+
+## **ABPRO4**
+* Crear un paquete de nombre “conexion”.
+* En el paquete creado en el punto anterior, agregue una clase con un método que permita
+retornar una conexión a la base de datos antes mencionada por medio del patrón Singleton.
+* Modificar el comportamiento de los métodos de implementación de la clase Capacitacion.
+Debe lograr que la plataforma permita desplegar el listado de capacitaciones registrado en
+la base de datos, y que al mismo tiempo permita registrar un nuevo registro en la base de
+datos.
+* En el caso del formulario de creación de una nueva capacitación, los datos se deben validar
+por medio de Javascript o jQuery. Aplique las validaciones indicadas en ejercicios de
+módulos anteriores relacionadas con este caso de uso.
+
+## **ABPRO5**
+* Cambiar el nombre del paquete que contiene los servlets, y use el nombre “controlador”.
+* Crear un paquete de nombre “modelo”.
+* En el paquete anteriormente creado, debe agregar las clases: Capacitacion, Usuario, Cliente,
+Administrativo, Profesional. Los atributos de cada clase deben estar en sintonía con el
+resultado esperado.
+* Agregar un servlet correspondiente al caso de uso “Listado de Usuarios”, el cual debe
+desplegar el diseño HTML creado en ejercicios anteriores.
+* Agregar el servlet correspondiente al caso de uso “Crear Usuario”, el cual debe desplegar
+el formulario creado en ejercicios anteriores.
+* Siguiendo la misma línea del ejercicio anterior, se pide mantener la responsividad del sitio,
+los estilos CSS, funciones Javascript y acciones jQuery que apliquen a cada caso.
+* Los servlets creados solo pueden ser accedidossi existe una sesión de usuario
+activa.
+
+
+
 
 
 ### Integrantes
