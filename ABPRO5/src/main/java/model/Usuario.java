@@ -10,6 +10,8 @@ public class Usuario {
 	private Date fNacimiento;
 	private Integer run;
 	
+	public Usuario() {}
+	
 	
 	public Integer getIdUsuario() {
 		return idUsuario;

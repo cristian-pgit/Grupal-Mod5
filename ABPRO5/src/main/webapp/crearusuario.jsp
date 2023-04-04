@@ -11,10 +11,14 @@
 	integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
 	crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <link rel="shortcut icon" href="https://i.ibb.co/FzxxWTL/BDLY-ico.png"
 	type="image/x-icon">
@@ -62,9 +66,37 @@
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="text-center" for="run">RUN (Rol Unico Nacional):</label> 
-						<input type="number" class="form-control" id="run" required name="run">
+						<label class="text-center" for="run">RUN (Rol Unico
+							Nacional):</label> <input type="number" class="form-control" id="run"
+							required name="run">
 					</div>
+
+					<div class="form-group">
+						<label for="tipo">Perfil del Usuario:</label> <select
+							class="form-control" id="tipo" name="tipo">
+							<option value="novalue" disabled selected hidden>Selecciona
+								un Perfil</option>
+							<option value="cli">Cliente</option>
+							<option value="pro">Profesional</option>
+							<option value="adm">Administrativo</option>
+						</select>
+					</div>
+
+					<c:choose>
+						<c:when test="${tipo eq 'cli'}">
+							<jsp:include page="crearcliente.jsp" />
+						</c:when>
+						<c:when test="${tipo eq 'pro'}">
+							<jsp:include page="crearprofesional.jsp" />
+						</c:when>
+						<c:when test="${tipo eq 'adm'}">
+							<jsp:include page="crearadministrativo.jsp" />
+						</c:when>
+						<c:otherwise>
+							<!-- Código a ejecutar si no se cumple ninguna condición anterior -->
+						</c:otherwise>
+					</c:choose>
+
 					<br>
 					<button type="submit" class="btn btn-primary" id="save">Guardar</button>
 				</form>

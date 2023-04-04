@@ -11,41 +11,33 @@ import model.Usuario;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.List;
 
-import conexion.SingletonImnot;
 import implementacion.UsuarioDaoImpl;
 import interfaces.UsuarioDAO;
+
 
 public class Login extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private static final String USUARIO = "admin";
 	private static final String PASS = "1234";
-	private Connection conn;
-	private Statement stm;
-	private ResultSet rs;
-	private PreparedStatement st;
 
-	/**
-	 * @see HttpServlet#HttpServlet()
-	 */
-	public Login() {
-		super();
-	}
+	
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public Login() {
+        super();
+    }
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		PrintWriter out;
 		out = response.getWriter();
 		HttpSession session = request.getSession();
 		String userName = request.getParameter("userName");
 		String pass = request.getParameter("floatingPassword");
-
+		
 		boolean esUsuarioValido = validarUsuarioYPass(userName, pass);
 		if (esUsuarioValido) {
 			System.out.println("El usuario es correcto");
@@ -56,20 +48,24 @@ public class Login extends HttpServlet {
 			System.out.println("El usuario no es correcto");
 			response.sendRedirect("error.jsp");
 		}
-
 	}
+
 
 	private boolean validarUsuarioYPass(String userName, String pass) {
-		return userName.equals(USUARIO) && pass.equals(PASS);
-
+		if (obtenerUsuario(userName, pass) != null) {
+			return obtenerUsuario(userName, pass) != null;
+		} else {
+			return userName.equals(USUARIO) && pass.equals(PASS);
+		}
+	}
+	
+	private Usuario obtenerUsuario(String userName, String pass) {
+		UsuarioDAO udao = new UsuarioDaoImpl();
+		Usuario user = udao.getUsuarioByNameandPass(userName, pass);
+		
+		return user;
+		
 	}
 
-	private void initConnection() {
-		conn = null;
-		stm = null;
-		st = null;
-		rs = null;
-
-	}
 
 }

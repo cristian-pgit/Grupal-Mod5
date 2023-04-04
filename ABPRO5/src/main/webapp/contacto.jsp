@@ -45,7 +45,7 @@
 								<span class="col-md-1 col-md-offset-2 text-center"><i
 									class="fa fa-user bigicon"></i></span>
 								<div class="col">
-									<input id="lname" name="name" type="text"
+									<input id="lname" name="lname" type="text"
 										placeholder="Apellidos" class="form-control">
 								</div>
 							</div>
