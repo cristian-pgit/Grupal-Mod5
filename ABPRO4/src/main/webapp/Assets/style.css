@@ -3,7 +3,8 @@
 body {
 	background-image: url(https://i.ibb.co/ws2HG7h/BDLY-fondo.png);
 	background-size: cover;
-	background-position: center;
+	
+	
 }
 
 #user {
@@ -75,7 +76,8 @@ body {
 
 body{
     
-    background-size: 100%;  
+    background-size: 100%;
+    background-repeat: repeat-y;
 }
 
 img {
@@ -123,6 +125,17 @@ tr:nth-child(even) {
 
 tr:hover {
 	background-color: #ddd;
+}
+/* --------------------------------- */
+/*  Contacto */
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    --bs-gutter-x: 3.5rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-right: auto;
+    margin-left: auto;
 }
 /* --------------------------------- */
 /*  Crear Capacitacion */

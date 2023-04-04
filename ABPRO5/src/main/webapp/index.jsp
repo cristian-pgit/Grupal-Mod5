@@ -19,7 +19,7 @@
 			<div class="col-4"></div>
 			<div class="col-4">
 				<main class="form-signin w-100 m-auto">
-					<form action="LoginServlet" method="post">
+					<form action="Login" method="post">
 						<img class="mx-auto d-block mt-4" src="https://i.ibb.co/FzxxWTL/BDLY-ico.png" alt="your-image-alt" width="72" height="57">
 						<h1 class="h3 mb-3 fw-normal text-center">Sitio de Ingreso al Sistema</h1>
 
