@@ -73,29 +73,17 @@
 
 					<div class="form-group">
 						<label for="tipo">Perfil del Usuario:</label> <select
-							class="form-control" id="tipo" name="tipo">
-							<option value="novalue" disabled selected hidden>Selecciona
-								un Perfil</option>
+							class="form-control" id="tipo" name="tipo" onchange="loadForm(this.value)">
+							<option value="" disabled selected hidden>---Selecciona---</option>
 							<option value="cli">Cliente</option>
 							<option value="pro">Profesional</option>
 							<option value="adm">Administrativo</option>
 						</select>
+						
 					</div>
 
-					<c:choose>
-						<c:when test="${tipo eq 'cli'}">
-							<jsp:include page="crearcliente.jsp" />
-						</c:when>
-						<c:when test="${tipo eq 'pro'}">
-							<jsp:include page="crearprofesional.jsp" />
-						</c:when>
-						<c:when test="${tipo eq 'adm'}">
-							<jsp:include page="crearadministrativo.jsp" />
-						</c:when>
-						<c:otherwise>
-							<!-- Código a ejecutar si no se cumple ninguna condición anterior -->
-						</c:otherwise>
-					</c:choose>
+					<div id="form-container"></div>
+					
 
 					<br>
 					<button type="submit" class="btn btn-primary" id="save">Guardar</button>
@@ -115,5 +103,6 @@
 		crossorigin="anonymous"></script>
 	<script src="Assets/crearuser.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<script src="Assets/segperfil.js"></script>
 </body>
 </html>

@@ -55,6 +55,7 @@ public class CrearUsuario extends HttpServlet {
 		String password = request.getParameter("password");
 		String fechaNac = request.getParameter("fechaNac");
 		String run = request.getParameter("run");
+		String perfil = request.getParameter("tipo");
 		if(idUser == null||userName ==null|| password==null||fechaNac==null||run==null) {
 			System.out.println("formulario con campos vacio");	
 		} else {
@@ -65,6 +66,7 @@ public class CrearUsuario extends HttpServlet {
 				user.setPassword(password);
 				user.setfNacimiento(getDate(fechaNac));
 				user.setRun(Integer.parseInt(run));
+				user.setPerfil(perfil);
 			} catch (NumberFormatException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

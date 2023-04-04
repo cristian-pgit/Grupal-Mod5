@@ -9,6 +9,7 @@ public class Usuario {
 	private String password;
 	private Date fNacimiento;
 	private Integer run;
+	private String perfil;
 	
 	public Usuario() {}
 	
@@ -43,6 +44,16 @@ public class Usuario {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+		public String getPerfil() {
+		return perfil;
+	}
+
+
+	public void setPerfil(String perfil) {
+		this.perfil = perfil;
+	}
+
+
 		@Override
 	public String toString() {
 		return "Id Usuario: " + idUsuario + 

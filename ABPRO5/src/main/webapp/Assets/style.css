@@ -101,6 +101,7 @@ img {
 .carousel-control-next-icon {
   color: #000000;
   background-color: #000000;
+  border-radius: 25px !important;
 }
 /* --------------------------------*/
 /* Seccion de listar capacitaciones*/
