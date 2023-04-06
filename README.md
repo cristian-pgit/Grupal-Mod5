@@ -20,9 +20,17 @@ Una vez tenemos el comportamiento utilizamos **JSP(Java Server Pages)** que nos 
 plantillas HTML que incluyen código incrustado (llamados sniplets) mediante marcadores
 especiales.
 
-Finalmente implementamos la libreria de **JSTL**, que es un conjunto de librerías de
+Implementamos la libreria de **JSTL**, que es un conjunto de librerías de
 etiquetas simples y estándares que encapsulan la funcionalidad principal que es usada
 comúnmente para escribir páginas JSP.
+
+Se genero una base de datos generada en **SQL** y se accede a ella mediante la biblioteca **JBDC(Java Database Conectivity)**
+
+Ademas se utilizaron los patrones de diseño **MVC(Modelo Vista Controlador)**, **DAO(Data Object Access)** y **Singleton** para
+tener el código bien organizado, legible y mantenible, además permiten reutilizar
+código y aumenta la escalabilidad en el proyecto.
+
+Por ultimo, se realiza el despliegue de la aplicacion mediante el gestor del servidor **Apache Tomcat**.
 
 Hasta el momento las funcionalidades que tiene el proyecto son:
 * Login y log out
@@ -54,11 +62,11 @@ contrario se debe mantener en el mismo servlet.
 
 
 ## **ABPRO3**
-* En caso de que algún servlet esté generando código HTML directamente, debe modificar
+* En caso de que algún servlet esté generando código HTML directamente, modificar
 este comportamiento utilizando un JSP adecuado al caso.
 * Aplicar estilos CSS a cada sitio. Todos los archivos JSP deben compartir el mismo
 archivo de estilos.
-* En caso de que aplique, implemente funciones Javascript, jQuery o librerías que contengan
+* En caso de que aplique, implementar funciones Javascript, jQuery o librerías que contengan
 funcionalidades pertinentes a los casos de uso implementados.
 * Todas las páginas deben compartir el mismo menú, a excepción del login.
 * Finalmente, implemente un servlet que permita cerrar la sesión de usuario, y redireccionar
@@ -70,7 +78,7 @@ al usuario al sitio de login.
 * En el paquete creado en el punto anterior, agregue una clase con un método que permita
 retornar una conexión a la base de datos antes mencionada por medio del patrón Singleton.
 * Modificar el comportamiento de los métodos de implementación de la clase Capacitacion.
-Debe lograr que la plataforma permita desplegar el listado de capacitaciones registrado en
+Se debe lograr que la plataforma permita desplegar el listado de capacitaciones registrado en
 la base de datos, y que al mismo tiempo permita registrar un nuevo registro en la base de
 datos.
 * En el caso del formulario de creación de una nueva capacitación, los datos se deben validar
@@ -92,7 +100,40 @@ los estilos CSS, funciones Javascript y acciones jQuery que apliquen a cada caso
 * Los servlets creados solo pueden ser accedidossi existe una sesión de usuario
 activa.
 
+##**ABPRO5.1**
+* Revision en caso de que no se hayan agregado los accesores, los mutadores, los constructores o el método toString en alguna de las clases creadas en
+el paquete “modelo”.
+* Crear un paquete de nombre “interfaces”.
+* En el paquete anterior, crear una interface para la clase Capacitacion. En ella deben estar
+declarados dos métodos: uno que retorne una lista de objetos de tipo Capacitacion (no debe
+recibir ningún parámetro), y otro que reciba un objeto de tipo Capacitacion y lo “registre”
+en sistema (no se pide que almacene nada, solo se simulará una acción).
+* Crear un paquete de nombre “implementacion”.
+* En el paquete creado en el paso anterior, agregar una clase que “implemente” la interface
+creada; esto lo obligará a incorporar acciones para los métodos definidos. Para el caso del
+método que entrega un listado de capacitaciones, se genera una rutina que retorne una lista
+de al menos tres objetos creados manualmente. En el caso del método que crea una
+capacitación, generar una rutina que reciba un objeto, y que despliegue sus datos por
+consola de Java.
+* Modificar el servlet que lista las capacitaciones, y haga una rutina tal que llame a la clase
+de implementación, y que utilice el método respectivo para obtener el listado de
+capacitaciones. Dicho listado debe desplegarlo por medio de la vista JSP utilizada en el caso
+de uso correspondiente.
+* Modificar el servlet que permite crear una capacitación. Dicho servlet debe desplegar el
+formulario de creación de capacitaciones; al procesar el formulario, sus datos deben ser
+recuperados por otro servlet, el cual generará un objeto de tipo Capacitacion, y usando
+dicho objeto llamará al método de creación de un registro en sistema. Una vez llamado al
+método, debe desplegar un mensaje alusivo a través de una vista JSP especialmente creada
+para este efecto.
 
+## **ABPRO6**
+
+* Agregar al sitio actual una funcionalidad que permita desplegar el listado de usuarios.
+Incorpore para ello las clases que sean necesarias en los diferentes paquetes.
+* Generar un archivo WAR que contenga el proyecto actual.
+* Cargar el archivo WAR en una instancia local del servidor Tomcat.
+* Ejecutar la plataforma ingresando directamente desde el navegador a la dirección de
+Tomcat.
 
 
 
