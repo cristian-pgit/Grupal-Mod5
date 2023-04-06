@@ -83,10 +83,10 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
- <error-page>
-  <error-code>404</error-code>
-  <location>/ErrorPage404.jsp</location>
-</error-page>
+  <error-page>
+    <error-code>404</error-code>
+    <location>/ErrorPage404.jsp</location>
+  </error-page>
   <servlet>
     <description>desloguea</description>
     <display-name>Logout</display-name>
@@ -136,5 +136,15 @@
   <servlet-mapping>
     <servlet-name>ListarUsuarios</servlet-name>
     <url-pattern>/ListarUsuarios</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CrearContacto</display-name>
+    <servlet-name>CrearContacto</servlet-name>
+    <servlet-class>controladores.CrearContacto</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CrearContacto</servlet-name>
+    <url-pattern>/CrearContacto</url-pattern>
   </servlet-mapping>
 </web-app>

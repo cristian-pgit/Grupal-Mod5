@@ -43,16 +43,16 @@
 						data-bs-ride="carousel">
 						<div class="carousel-inner">
 							<div class="carousel-item active">
-								<img src="Assets/prev7.jpg" class="d-block w-65 h-50  img-fluid"
+								<img src="Assets/prev7.jpg" class="d-block w-85 h-50  img-fluid"
 									alt="...">
 							</div>
 							<div class="carousel-item">
 								<img src="Assets/prev4.jpeg"
-									class="d-block w-65 h-50  img-fluid" alt="...">
+									class="d-block w-85 h-50  img-fluid" alt="...">
 							</div>
 							<div class="carousel-item">
 								<img src="Assets/prev2.webp"
-									class="d-block w-65 h-50  img-fluid" alt="...">
+									class="d-block w-85 h-50  img-fluid" alt="...">
 							</div>
 						</div>
 						<button class="carousel-control-prev" type="button"
@@ -71,6 +71,7 @@
 			</div>
 			<div class="row">
 				<br> <br> <br> <br> <b>
+				<br>
 					<h1 class="subtitulo1">Servicios</h1>
 				</b>
 				<div>
