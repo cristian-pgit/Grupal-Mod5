@@ -40,12 +40,12 @@ public class Login extends HttpServlet {
 		
 		boolean esUsuarioValido = validarUsuarioYPass(userName, pass);
 		if (esUsuarioValido) {
-			System.out.println("El usuario es correcto");
+			System.out.println("El usuario es correcto"+". Se ha conectado:"+userName);
 			session.setAttribute("userName", userName);
 			RequestDispatcher rd = getServletContext().getRequestDispatcher("/inicio.jsp");
 			rd.forward(request, response);
 		} else {
-			System.out.println("El usuario no es correcto");
+			System.out.println("El usuario o pass Incorrecto");
 			response.sendRedirect("error.jsp");
 		}
 	}
