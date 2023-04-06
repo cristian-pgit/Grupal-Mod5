@@ -10,7 +10,7 @@ public class SingletonImnot {
 		String url = "jdbc:mysql://localhost:3306/bdlydb";
 		String driver = "com.mysql.cj.jdbc.Driver";
 		String usuario = "root";
-		String password = "374281";
+		String password = "Larcon90";
 		try{
 			Class.forName(driver);
 			conn = DriverManager.getConnection

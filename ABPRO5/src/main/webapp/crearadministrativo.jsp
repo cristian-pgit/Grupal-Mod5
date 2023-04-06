@@ -1,7 +1,7 @@
 
+<c:set var="value" value="${param.tipo}" />
+<form action="CrearAdm" method="post">
 <h1 class="h3 mb-3 fw-normal text-center">Especifico Administrativo</h1>
-
-<form action="CrearUsuario" method="post">
 	<!-- <div class="form-group">
 						<label class="text-center" for="idadm">Id Administrativo: </label> <input
 							type="number" class="form-control" id=""idadm"" required
@@ -16,3 +16,5 @@
 			Previa: </label> <input type="number" class="form-control" id="exppre"
 			required name="exppre">
 	</div>
+	<button type="submit" class="btn btn-primary" id="saveadm">Guardar</button>
+</form>

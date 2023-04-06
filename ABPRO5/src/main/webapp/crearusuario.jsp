@@ -73,21 +73,27 @@
 
 					<div class="form-group">
 						<label for="tipo">Perfil del Usuario:</label> <select
-							class="form-control" id="tipo" name="tipo" onchange="loadForm(this.value)">
+							class="form-control" id="tipo" name="tipo"
+							onchange="displayFormFields()">
 							<option value="" disabled selected hidden>---Selecciona---</option>
 							<option value="cli">Cliente</option>
 							<option value="pro">Profesional</option>
 							<option value="adm">Administrativo</option>
 						</select>
-						
 					</div>
-
-					<div id="form-container"></div>
-					
-
 					<br>
 					<button type="submit" class="btn btn-primary" id="save">Guardar</button>
 				</form>
+				<div class="formulario d-none" id="formulario-cli">
+					<jsp:include page="crearcliente.jsp" />
+				</div>
+				<div class="formulario d-none" id="formulario-pro">
+					<jsp:include page="crearprofesional.jsp" />
+				</div>
+				<div class="formulario d-none" id="formulario-adm">
+					<jsp:include page="crearadministrativo.jsp" />
+				</div>
+
 			</div>
 			<div class="col-4"></div>
 		</div>
