@@ -1,0 +1,1 @@
+select * from usuario join administrativo on idUsuario = id_administrativo 
