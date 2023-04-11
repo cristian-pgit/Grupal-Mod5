@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 body {
-	background-image: url(https://i.ibb.co/ws2HG7h/BDLY-fondo.png);
+	background-image: url(https://i.ibb.co/GvdVbMR/black.png);
 	background-size: cover;
 	
 	
@@ -39,7 +39,7 @@ body {
 }
 /* Seccion Inicio*/
 
-.titulo1 {
+#titulo1 {
     text-align: center;
     font-family: 'Anton', sans-serif;
     
@@ -70,7 +70,7 @@ body {
     height: auto;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; 
 
 }
 
@@ -148,5 +148,9 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 
 input[type=number] {
 	-moz-appearance: textfield;
+}
+
+.col{
+	background-image: url(https://i.ibb.co/4f27XXk/bdly.png);
 }
 

@@ -28,7 +28,8 @@
 			<div class="col-sm-3"></div>
 			<div class="col-sm-6">
 				<div class="well well-sm">
-					<form class="form-horizontal" method="post">
+				
+					<form class="form-horizontal" action="CrearContacto" method="post">
 						<fieldset>
 							<legend class="text-center header" id="headerContacto">Contactanos</legend>
 
@@ -63,7 +64,7 @@
 								<span class="col-md-1 col-md-offset-2 text-center"><i
 									class="fa fa-phone-square bigicon"></i></span>
 								<div class="col">
-									<input id="phone" name="phone" type="text"
+									<input id="phone" name="phone" type="number"
 										placeholder="Numero Telefonico" class="form-control">
 								</div>
 							</div>
@@ -118,11 +119,13 @@
 		</div>
 	</div>
 
-
+    <script src= "https://code.jquery.com/jquery-3.6.0.min.js" ></script>
 
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
 		crossorigin="anonymous"></script>
+		<script src= "Assets/enviarcontacto.js"></script>
+		<script src = "https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
